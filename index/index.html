@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport content"="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+     
+        .body{
+            background: linear-gradient(to right,rgb(180, 101, 180),rgb(236, 218, 221),rgb(239, 173, 173));  
+        }
+         table,tr, td{
+            background-color: aquamarine;
+            border-radius: 10px;
+            height: 30px;
+            border: 1px solid white;
+           
+            background: linear-gradient(to right,purple,pink,maroon);
+        
+        }
+       
+        button{
+            background: linear-gradient(to right,purple,pink,maroon);
+             border-radius: 50px; 
+             height: none;
+             margin-left: 9px;
+             background-color: aquamarine;
+            text-shadow: 5px 5px 5px solid red;
+            border: none;
+            cursor: pointer;
+            border: purple;
+        }
+        input{
+            float: bottom inset;
+            height: 15px;
+            border-radius: 50px;
+            background: linear-gradient(to right,rgb(180, 101, 180),rgb(236, 218, 221),rgb(239, 173, 173));
+        } 
+        
+      
+    </style>
+    <script>
+        function back()
+        {
+            var a=inputbox.value;
+            a=a.substr(0,a.length-1);
+            inputbox.value=a;
+        }
+    </script>
+</head>
+<body class="body">
+    
+    <form name="calc" id="abc" style="padding-left: 40%; padding-top: 10%;">
+    <table border="1px">
+        <tr>
+            <td colspan="4" style="height: 25px; border-radius: 30px;">
+            <input type="text" name="box">
+            </td>
+         
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calc.box.value=' '">C</button></td>
+            <td><button type="button" onclick="calc.box.value+='%' ">%</button></td>
+            <td><button type="button" onclick="calc.box.value+='*' ">X</button></td>
+            <td><button type="button" onclick="calc.box.value+='/' ">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calc.box.value+='9' "  id="">9</button></td>
+            <td><button type="button" onclick="calc.box.value+='8' ">8</button></td>
+            <td><button type="button" onclick="calc.box.value+='7' ">7</button></td>
+            <td><button type="button" onclick="calc.box.value+='+' ">+</button></td>
+        </tr>
+
+        <tr>
+            <td><button type="button" onclick="calc.box.value+='6' ">6</button></td>
+            <td><button type="button" onclick="calc.box.value+='5' ">5</button></td>
+            <td><button type="button" onclick="calc.box.value+='4' ">4</button></td>
+            <td><button type="button" onclick="calc.box.value+='-' ">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calc.box.value+='3' ">3</button></td>
+            <td><button type="button" onclick="calc.box.value+='2' ">2</button></td>
+            <td><button type="button" onclick="calc.box.value+='1' ">1</button></td>
+            <td rowspan="2"><button type="button" id="btn" onclick="calc.box.value=eval(calc.box.value)">=</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calc.box.value+='00' ">00</button></td>
+            <td><button type="button" onclick="calc.box.value+='0' ">0</button></td>
+            <td><button type="button" onclick="calc.box.value=' '" id="back()">&larr;</button></td>
+           
+        </tr>
+    </table>
+</form>
+</body>
+</html>
